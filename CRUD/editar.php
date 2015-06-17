@@ -14,9 +14,9 @@ $nome;
 $nota;
 if (isset($_POST["editar"])) {
 
-	$alunos->setId($_POST["id"]);
-	$alunos->setNome($_POST["nome"]);
-	$alunos->setNota($_POST["nota"]);
+	$alunos->setId($_POST["id"])
+			->setNome($_POST["nome"])
+			->setNota($_POST["nota"]);
 	$altera = $alunos->alterar();
 	if ($altera) {
 		header("location: index.php");

@@ -10,8 +10,8 @@ include_once("alunos.php");
 $alunos = new Alunos($conexao);
 if (isset($_POST["gravar"])) {
 
-	$alunos->setNome($_POST["nome"]);
-	$alunos->setNota($_POST["nota"]);
+	$alunos->setNome($_POST["nome"])
+			->setNota($_POST["nota"]);
 	$inserir = $alunos->inserir();
 	if ($inserir) {
 		header("location: index.php");
